@@ -48,7 +48,7 @@
 <pre><img src="./assets/blank.gif" alt="     "> <u><font color="blue">Name</a></u>                    <u>Last modified</u>       <u>Size</u>   <u>Description</u></font>
 <hr>
 <script>
-fetch('toc.html')
+fetch('toc.html', { headers: { 'Content-Type': 'text/html' } })
   .then(response => response.text())
   .then(html => {
     document.getElementById('shared-links').innerHTML = html;
